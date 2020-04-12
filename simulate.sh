@@ -1,2 +1,7 @@
-iverilog -o a.out ff.v phase_detector.v loop_filter.v vco_model.v pll_full_model.v
+
+rm gain_3000_150.csv
+rm a.out
+rm pll_full_model.vcd
+
+iverilog -o a.out *.v
 vvp a.out
